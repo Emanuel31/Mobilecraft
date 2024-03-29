@@ -1,0 +1,298 @@
+/* General rule*/
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+/* Body rules*/
+body {
+    width: 100%;
+    height: 100vh;
+    background: #420e4b;
+    background: linear-gradient(160deg, rgba(66,14,75,1) 0%, rgba(207,0,99,1) 100%, rgba(207,0,99,1) 100%);
+}
+
+/** HEADER STYLING RULES **/
+#flex-container {
+    display: flex; /* Inline flex */
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.flex-items {
+    flex: 1;
+}
+
+.logo > h1 {
+    color: #fff;
+    font-family: Tahoma;
+    font-weight: 700;
+    margin-top: 35px;
+    margin-left: 100px;
+}
+
+.main-nav {
+    flex: 2;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+.main-nav ul li {
+    display: inline-block;
+    padding: 20px;
+}
+
+.main-nav ul li a {
+    color: #fff;
+    font-size: 1.3rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+.main-nav ul li a:hover {
+    padding-bottom: 5px;
+    border-bottom: 5px solid #dad2dc;
+}
+
+/** MAIN SECTION STYLING RULES **/
+
+/* Hero image section */
+.grid-container {
+    display: grid;
+}
+
+.hero {
+    position: relative;
+    margin-top: 50px;
+}
+
+.hero h2, h3 {
+    position: absolute;
+    color: #efecec;
+    font-size: 3rem;
+    top: 100px;
+    left: 100px;
+    z-index: 1;
+}
+
+.hero h3 {
+    position: absolute;
+    color: #efecec;
+    font-size: 2.5rem;
+    top: 200px;
+    left: 100px;
+    z-index: 1;
+}
+
+.image-hero img {
+    width: 100%;
+    height: 600px;
+    filter: brightness(0.5);
+}
+
+.hero a {
+    position: absolute;
+    color: #fff;
+    left: 100px;
+    top: 300px;
+    z-index: 1;
+    border: 1px solid #420e4b;
+    border-radius: 5px;
+    background-color: #420e4b;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.hero a:hover {
+    background-color:  rgba(207,0,99,1);
+    transition: ease;
+    border: none;
+}
+
+/* Our services styling rules */
+#services {
+    margin: 30px;
+}
+
+#services > h2 {
+    margin-bottom: 50px;
+}
+
+.grid-column {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+}
+
+.card > h4 {
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: x-large;
+    font-weight: 700;
+}
+
+.card > p {
+    color: #efecec;
+    padding: 5px;
+    text-align: center;
+    font-style: italic;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    border: 2px solid #420e4b;
+    border-radius: 10px;
+    filter: brightness(0.8);
+}
+
+#services > h2 {
+    color: #efecec;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* FOOTER STYLING RULES */
+/* Contact form styling rules */
+footer {
+    background-color: #450e4c;
+}
+
+footer > #copyright {
+    color: #dad2dc;
+    padding: 30px;
+    text-align: right;
+}
+
+
+/**** MEDIA QUERIES RULES ****/
+
+/*Mobile Devices: 319px — 480px*/
+@media (max-width: 480px) {
+
+    header#flex-container {
+       width: 100%;
+       height: 100px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .logo > h1 {
+        font-size: 2rem;
+    }
+
+    .image-hero img {
+        display: none;
+    }
+
+    .hero {
+        position: relative;
+    }
+
+    .hero h2 {
+        position: absolute;
+        font-size: 1.3rem;
+        top: 0;
+        left: 20px
+    }
+
+    .hero h3 {
+        position: absolute;
+        font-size: 1rem;
+        top: 50px;
+        left: 20px
+    }
+
+    .hero a {
+        width: 100%;
+        top: 100px;
+        width: 200px;
+    }
+
+    .grid-column {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    #services > h2 {
+        margin-top: 190px;
+    }
+
+    footer > #copyright {
+        text-align: center;
+    }
+  }
+
+  /*iPads Devices: 481px — 1200px*/
+  @media (min-width: 481px) and (max-width: 892px) {
+    header#flex-container {
+        width: 100%;
+        height: 100px;
+     }
+
+     .main-nav {
+        display: none;
+    }
+
+    .logo > h1 {
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .hero {
+        margin-top: 0px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+        top: 50px;
+        left: 30px;
+    }
+    
+    
+    .hero h3 {
+        font-size: 1.5rem;
+        top: 120px;
+        left: 50px;
+    }
+
+    .hero a {
+        top: 180px;
+        left: 100px;
+    }
+
+    .image-hero img {
+        height: 400px;
+    }
+
+    .grid-column {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    
+
+  }
+
+   /* Laptop Devices: 1200px — 1600px*/
+   @media (min-width: 1201px) and (max-width: 1600px) {
+    
+  }
+
+   /* Desktop Devices: 1600px and above*/
+   @media (min-width: 1601px) {
+    
+  }
+
+
